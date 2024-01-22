@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Khaoula ICHOUKADE" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+<main class="wrapper about">
+    <Hero
+        title="About"
+        tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+    >
+    </Hero>
+
+    <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+            <p>
+                I am currently in the second year of my Master's program at Ibn Zohr University in Agadir, specializing in Distributed Computer Systems & Big Data, with a particular focus on Big Data and Business Intelligence. Throughout my academic journey, I have delved into cutting-edge technologies and undertaken a comprehensive study of intricate system architectures.
+            </p>
+            <p>
+                Over the course of my studies, I have cultivated a profound interest in both backend and frontend development for web and mobile platforms. This enthusiasm has motivated me to acquire a profound understanding of the intricacies involved in crafting efficient and user-friendly digital experiences. Additionally, my academic pursuits have expanded to encompass the dynamic fields of Big Data and Business Intelligence.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+            <p>
+                <strong>Ibn Zohr University, Agadir</strong><br>
+                <span>Specialized Master in Distributed Computing Systems & Big Data | 2022 - Present</span>
+            </p>
+			<br>
+            <p>
+                <strong>Higher School of Technology, Essaouira</strong><br>
+                <span>Professional Bachelor's in Computer Systems and Software Engineering | 2021 - 2022</span>
+            </p>
+			<br>
+            <p>
+                <strong>Higher School of Technology, Essaouira</strong><br>
+                <span>University Diploma of Technology in Computer Engineering | 2019 - 2021</span>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Computer Skills</h2>
+        <div class="content">
+            <p>
+                <strong>Backend Development:</strong> Laravel, Spring, Spring Boot, NodeJS, ExpressJS, Django<br>
+                <strong>Frontend Development:</strong> ReactJS, VueJS<br>
+                <strong>Database Technologies:</strong> Oracle, MySQL, MongoDB, HBase<br>
+                <strong>Mobile Development:</strong> Android (Java), Flutter/Dart<br>
+                <strong>Data Visualization and BI:</strong> Power BI, Power Query<br>
+                <strong>ETL:</strong> Pentaho, Talend, Semarchy xDI<br>
+                <strong>Big Data:</strong> Hadoop, Spark, Hive, Kafka<br>
+                <strong>Other Tools and Technologies:</strong> Git, Github, Postman
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Work Experience</h2>
+        <div class="content">
+            <p>
+                <strong>The Chamber of Commerce, Industry, and Services | Essaouira | Intern | Apr 2021 - Jun 2021</strong><br>
+                - Collaborated on diverse projects involving backend development using technologies such as Laravel, Spring, Spring Boot, NodeJS, and ExpressJS.<br>
+                - Gained hands-on experience in frontend development using ReactJS and VueJS.<br>
+                - Contributed to the implementation of computer systems for efficient data management.
+            </p>
+			<br>
+            <p>
+                <strong>AjiCod Agency | Agadir | Intern | Apr 2022 - Jun 2022</strong><br>
+                - Played a crucial role in creating a platform for personnel and training management within the institute (AjiCod).<br>
+                - Applied skills in Analysis & Design, Mockup Implementation, and the Development of Front & Back End.<br>
+                - Utilized technologies such as Laravel, Vue.js, Tailwind CSS, Element Plus, MySQL, Git, and Jira.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Certifications</h2>
+        <div class="content">
+            <p>
+                - Google Business Intelligence Certificat Professionnel<br>
+                - Coursera Certificate in Big Data Specialization from the University of California, San Diego<br>
+                - Introduction to Big Data with Spark and Hadoop from IBM<br>
+                - Coursera Certificate in Extract, Transform and Load Data in Power BI from Microsoft
+            </p>
+        </div>
+    </section>
+
+</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
